@@ -16,6 +16,15 @@ $ npm i
 $ npm install
 ```
 
+## Configure the database
+
+
+<p align="center">
+  <a href="https://www.prisma.io/docs/concepts/database-connectors/postgresql#arguments" target="blank"><img src="https://www.prisma.io/docs/static/13ad9000b9d57ac66c16fabcad9e08b7/42cbc/postgresql-connection-string.png" width="900" alt="Nest Logo" /></a>
+</p>
+
+
+
 ## Generate the database and update
 ```
 $ npx prisma migrate dev
