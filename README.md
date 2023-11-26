@@ -9,3 +9,6 @@ In the project directory, you can run:
 `npm run build`
 Create the app for production in the build folder.
 Properly package Node in production mode and optimize the build for best performance.
+
+To generate the database and update it use the command
+`npx prisma migrate dev`
