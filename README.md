@@ -14,7 +14,7 @@ $ npm i
 $ npm install
 ```
 
-## To generate the database and update
+## Generate the database and update
 ```
 $ npx prisma migrate dev
 ```
