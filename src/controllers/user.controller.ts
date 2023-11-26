@@ -16,7 +16,7 @@ export const signUp = async (req: Request, res: Response): Promise<Response> => 
     const { email, names, surnames, password } = req.body;
     const hashedPassword = await hashPassword(password);
 
-    if (!(email || names || surnames || password)) {
+    if (!email || !names || !surnames || !password) {
         return res.status(400).json({ msg: 'Please. Send your email, names, surnames and password.' });
     }
     
@@ -41,7 +41,7 @@ export const signUp = async (req: Request, res: Response): Promise<Response> => 
 
 export const signIn = async (req: Request, res: Response) => {
     const { email, password } = req.body;
-    if (!(email || password)) {
+    if (!email || !password) {
         return res.status(400).json({ msg: 'Please. Send your email and password.' });
     }
     const user = await prisma.user.findUnique({
@@ -52,7 +52,7 @@ export const signIn = async (req: Request, res: Response) => {
     }
     const isMatch = await comparePassword(password, user.password as string);
     if (isMatch) {
-        return res.status(200).json({ token: createToken(user) });
+        return res.status(200).json({ token: createToken(user), userId : user.id });
     }
     return res.status(400).json({
         msg: 'The email or password are incorrect.'
