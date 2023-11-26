@@ -1,11 +1,12 @@
 import { Strategy, ExtractJwt, StrategyOptions} from 'passport-jwt'
 import { PrismaClient } from '@prisma/client';
+import config from '../config/config';
 
 const prisma = new PrismaClient();
 
 const opts: StrategyOptions = {
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-    secretOrKey: process.env.JWT_SECRET
+    secretOrKey: config.jwtSecret
 };
 
 export default new Strategy(opts, async (payload, done) => {
