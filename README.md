@@ -1,14 +1,40 @@
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://qualitapps.com/wp-content/uploads/2023/02/102.png" width="400" alt="Nest Logo" /></a>
+</p>
+
 # Available Scripts
 
-In the project directory, you can use to install modules:
-`npm i` or `npm install`
+## Install Packages
 
-In the project directory, you can run:
-`npm run dev`
+```bash
+$ npm i
+```
+### or
+```bash
+$ npm install
+```
 
-`npm run build`
-Create the app for production in the build folder.
-Properly package Node in production mode and optimize the build for best performance.
+## To generate the database and update
+```
+$ npx prisma migrate dev
+```
 
-To generate the database and update it use the command
-`npx prisma migrate dev`
+## Running the app
+
+```bash
+# development
+$ npm run start
+```
+
+## Create the app for production
+```
+$ npm run build
+```
+## Technologies
+```
+* TypeScript
+* Node Js - Express Js
+* PostgreSQL - ORM Prisma
+* BCrypt - PassPort
+* Json Web Token
+```
