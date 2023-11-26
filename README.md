@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://qualitapps.com/wp-content/uploads/2023/02/102.png" width="400" alt="Nest Logo" /></a>
+  <a href="https://expressjs.com/" target="blank"><img src="https://qualitapps.com/wp-content/uploads/2023/02/102.png" width="400" alt="Nest Logo" /></a>
 </p>
 
 # Available Scripts
@@ -9,7 +9,9 @@
 ```bash
 $ npm i
 ```
+
 ### or
+
 ```bash
 $ npm install
 ```
@@ -20,16 +22,23 @@ $ npx prisma migrate dev
 ```
 
 ## Running the app
-
 ```bash
-# development
+# Development
 $ npm run start
+
+# Listening to the compiler
+$ npm run dev
+```
+## Test
+```bash
+$ npm run test
 ```
 
 ## Create the app for production
 ```
 $ npm run build
 ```
+
 ## Technologies
 ```
 * TypeScript
